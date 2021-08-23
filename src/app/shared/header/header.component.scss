@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  height: 4.5em;
+  background-color: white;
+  -webkit-box-shadow: -2px 11px 17px -4px rgba(0,0,0,0.17);
+  box-shadow: -2px 11px 17px -4px rgba(0,0,0,0.17);
+}
+
+.images {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
+.images_fiap {
+  transform: scale(0.7);
+}
