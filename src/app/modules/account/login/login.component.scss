@@ -1,5 +1,65 @@
+* {
+  animation-duration: 1s;
+  animation-name: fade;
+}
+
 .container {
   font-family: 'Lato', sans-serif;
   font-style: italic;
+  margin-top: 5em;
+  box-sizing: border-box;
+  padding: 6em;
+}
+
+.container__grid {
   display: grid;
+  width: 100%;
+  grid-template-columns: 0.5fr 0.3fr;
+  gap: 10em;
+}
+
+.container__grid__main {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.container__grid__login {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container__subtitle {
+  color: rgb(158, 158, 158);
+  font-size: 1.3em;
+}
+
+.container__image {
+  width: 8em;
+  margin-top: 2em;
+}
+
+@media (max-width: 767px){
+  .container {
+    padding: 2em;
+  }
+
+  .container__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@keyframes fade {
+  from {
+    margin-top: 500px;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }

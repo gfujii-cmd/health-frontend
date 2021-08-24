@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class WideButtonComponent implements OnInit {
 
   @Input() title: string = '';
+  @Input() height: number = 30;
+  @Input() width: number = 200;
 
   constructor() { }
 
