@@ -1,0 +1,45 @@
+
+<div class="container">
+  <div class="container__grid">
+    <div>
+      <h1 class="container__title">Olá, HAOC!</h1>
+      <h2 class="container__subtitle">Acompanhe seu progresso diário aqui</h2>
+    </div>
+
+    <div class="container_grid__top__header">
+      <h1 class="container__title_top">TOP 3</h1>
+      <h2 class="container__subtitle">Os 3 colaboradores com a maior pontuação</h2>
+    </div>
+
+    <!-- PROGRESS BAR CHART -->
+    <div>
+      <div>
+        <div class="chartjs" style="display: block;">
+          <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            [style.height.px]="height">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <!------------------------------->
+
+    <div class="container__grid__top">
+      <div class="container__grid__top__card">
+        <div class="container__grid__top__card__name">
+          <p>João da Silva - 129 Pontos</p>
+        </div>
+        <div class="container__grid__top__card__name">
+          <p>Maria Albertini - 109 Pontos</p>
+        </div>
+        <div class="container__grid__top__card__name">
+          <p>Vanessa Souza - 89 Pontos</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
