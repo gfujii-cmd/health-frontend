@@ -3,11 +3,12 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent } from './header/header.component';
 import { WideButtonComponent } from './buttons/wide-button/wide-button.component';
 import { BaseInputComponent } from './inputs/base-input/base-input.component';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
