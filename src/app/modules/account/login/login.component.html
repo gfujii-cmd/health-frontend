@@ -10,8 +10,9 @@
 
     <div class="container__grid__login">
       <app-base-input [label]="'Login'" [id]="'login'"></app-base-input>
-      <app-base-input [label]="'Senha'" [id]="'senha'"></app-base-input>
-      <app-wide-button [title]="'Login'" [height]="40"></app-wide-button>
+      <app-base-input [label]="'Senha'" [id]="'senha'" [type]="'password'"></app-base-input>
+      <app-wide-button routerLink="/user/panel" [title]="'Login'" [height]="40"></app-wide-button>
+      <p class="container__grid__login__password_change">Esqueci minha senha</p>
     </div>
 
   </div>

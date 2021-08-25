@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
 
@@ -9,7 +10,7 @@ import { Label } from 'ng2-charts';
 })
 export class UserPanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,5 +29,9 @@ export class UserPanelComponent implements OnInit {
   ];
 
   public height = 400
+
+  goToPage(page: string): void {
+    this.router.navigate([`${page}`])
+  }
 
 }
