@@ -4,6 +4,15 @@
   background-color: white;
   -webkit-box-shadow: -2px 11px 17px -4px rgba(0,0,0,0.17);
   box-shadow: -2px 11px 17px -4px rgba(0,0,0,0.17);
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0.4em;
+  padding-right: 2em;
+}
+
+.images__fiap {
+  padding: 0.7em;
 }
 
 .images {
@@ -13,9 +22,10 @@
   justify-content: flex-start;
   flex-direction: row;
   box-sizing: border-box;
-  padding: 0.5em;
 }
 
-.images_fiap {
-  transform: scale(0.7);
+
+.header__p {
+  cursor: pointer;
+  box-sizing: border-box;
 }
