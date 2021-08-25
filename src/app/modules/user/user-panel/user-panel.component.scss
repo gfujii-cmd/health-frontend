@@ -64,7 +64,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 50%;
+  height: 80%;
+  margin-bottom: 5em;
 }
 
 @media (max-width: 1845px){
@@ -98,5 +99,7 @@
   .buttons {
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    height: 250px;
   }
 }

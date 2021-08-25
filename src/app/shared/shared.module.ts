@@ -4,16 +4,19 @@ import { HeaderComponent } from './header/header.component';
 import { WideButtonComponent } from './buttons/wide-button/wide-button.component';
 import { BaseInputComponent } from './inputs/base-input/base-input.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
     WideButtonComponent,
-    BaseInputComponent
+    BaseInputComponent,
+    FormsModule
   ],
   declarations: [
     HeaderComponent,
