@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { TokenStorageService } from 'src/app/core/services/auth/token-storage.service';
 
 @Component({
   selector: 'app-user-panel',
@@ -10,9 +11,15 @@ import { Label } from 'ng2-charts';
 })
 export class UserPanelComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  userName!: string;
+
+  constructor(
+    private router: Router,
+    private token: TokenStorageService
+    ) { }
 
   ngOnInit(): void {
+    this.userName = this.token.getUser();
   }
 
   public barChartOptions: ChartOptions = {
