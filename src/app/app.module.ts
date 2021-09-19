@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { AccountModule } from './modules/account/account.module';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './modules/user/user.module';
+import { HttpClientModule } from '@angular/common/http'
+import { AuthGuardService } from './guard/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,10 @@ import { UserModule } from './modules/user/user.module';
     AppRoutingModule,
     AccountModule,
     SharedModule,
-    UserModule
+    UserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,12 +8,19 @@
       <img class="container__image" src="../../../../assets/images/p-branco.png">
     </div>
 
-    <div class="container__grid__login">
-      <app-base-input [label]="'Login'" [id]="'login'"></app-base-input>
-      <app-base-input [label]="'Senha'" [id]="'senha'" [type]="'password'"></app-base-input>
-      <app-wide-button routerLink="/user/panel" [title]="'Login'" [height]="40"></app-wide-button>
-      <p class="container__grid__login__password_change">Esqueci minha senha</p>
-    </div>
-
+    <form [formGroup]="form" (submit)="submit()">
+      <div class="container__grid__login">
+        <div class="base_input">
+          <label class="base_input__label" for="email">Email:</label>
+          <input class="base_input__input" id="email" type="text" formControlName="email" required>
+        </div>
+        <div class="base_input">
+          <label class="base_input__label" for="password">Senha:</label>
+          <input class="base_input__input" id="password" type="password" formControlName="password" required>
+        </div>
+        <app-wide-button [title]="'Login'" [height]="40"></app-wide-button>
+        <p class="container__grid__login__password_change">Esqueci minha senha</p>
+      </div>
+    </form>
   </div>
 </div>
