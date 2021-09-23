@@ -13,6 +13,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<any> {
+    console.log(BASE_URL);
     return this.http.post(`${BASE_URL}/login`, {email: email, password: password});
   }
 }
