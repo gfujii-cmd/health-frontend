@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
           this.tokenService.saveUser(this.tokenService.decodeToken(data.token).firstName);
           this.isSuccess = true;
           this.isFail = false;
+          this.tokenService.setEmail(this.form.get('email')?.value);
           this.router.navigate(['/user/panel']);
         }
     }, err => {
