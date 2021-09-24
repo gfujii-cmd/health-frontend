@@ -3,6 +3,7 @@ import jwt_decode from 'jwt-decode';
 
 const TOKEN = 'access_token';
 const USER =  'user';
+const EMAIL = 'email';
 
 @Injectable({
   providedIn: 'root'
@@ -36,6 +37,15 @@ export class TokenStorageService {
     }
 
     return null;
+  }
+
+  public setEmail(email: string): any {
+    window.sessionStorage.removeItem(EMAIL);
+    window.sessionStorage.setItem(EMAIL, email);
+  }
+
+  public getEmail(): any {
+    return window.sessionStorage.getItem(EMAIL);
   }
 
   public decodeToken(token: any): any {
