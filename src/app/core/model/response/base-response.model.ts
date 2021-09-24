@@ -1,5 +1,5 @@
 export interface BaseResponse<T> {
   httpCode: number,
-  data: T,
+  response: T,
   error: string | null
 }
