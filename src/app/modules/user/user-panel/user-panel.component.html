@@ -30,14 +30,8 @@
 
     <div class="container__grid__top">
       <div class="container__grid__top__card">
-        <div class="container__grid__top__card__name">
-          <p>João da Silva - 129 Pontos</p>
-        </div>
-        <div class="container__grid__top__card__name">
-          <p>Maria Albertini - 109 Pontos</p>
-        </div>
-        <div class="container__grid__top__card__name">
-          <p>Vanessa Souza - 89 Pontos</p>
+        <div *ngFor="let user of topList" class="container__grid__top__card__name">
+          <p>{{ user.name }} {{ user.lastName }} - {{ user.score }} Pontos</p>
         </div>
       </div>
     </div>

@@ -41,9 +41,10 @@ export class LoginComponent implements OnInit {
         if(data && data.token) {
           this.tokenService.saveToken(data.token);
           this.tokenService.saveUser(this.tokenService.decodeToken(data.token).firstName);
-          console.log(data);
           this.isSuccess = true;
           this.isFail = false;
+          this.tokenService.setEmail(this.form.get('email')?.value);
+          this.router.navigate(['/user/panel']);
         }
     }, err => {
       if(err.error.error == 'Unauthorized'){
