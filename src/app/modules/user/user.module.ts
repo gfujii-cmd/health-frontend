@@ -5,7 +5,8 @@ import { UserPanelComponent } from './user-panel/user-panel.component';
 import { UserRoutingModule } from './user-routing.module';
 import { ChartsModule } from 'ng2-charts';
 import { HandWashComponent } from './hand-wash/hand-wash.component';
-import { AuthGuardService } from 'src/app/guard/auth-guard.service';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from 'src/app/helpers/auth-interceptor';
 
 @NgModule({
   imports: [
@@ -19,6 +20,10 @@ import { AuthGuardService } from 'src/app/guard/auth-guard.service';
     UserPanelComponent,
     HandWashComponent
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
 })
 export class UserModule { }
