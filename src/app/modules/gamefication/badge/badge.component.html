@@ -1,0 +1,40 @@
+<div *ngIf="canShow">
+  <h1 style="text-align: center; margin-top: 2em;">Confira suas conquistas!</h1>
+<div class="container">
+
+  <div class="container__grid">
+    <div class="grid__image_container">
+      <h2>NÍVEL 1</h2>
+      <img class="grid__won_badge" src="../../../../assets/images/badges/level_one.png">
+      <div class="grid__badge_description">Primeiro nível. Algumas lavagens feitas. Está no caminho certo!</div>
+    </div>
+
+    <div class="grid__image_container">
+      <h2>NÍVEL 2</h2>
+      <img [ngClass]="{'grid__unavailable_badge': !canUpgrade && badgeLevel === 1,
+      'grid__available_badge': canUpgrade && badgeLevel === 1,
+      'grid__won_badge': badgeLevel === 2}"
+      src="../../../../assets/images/badges/level_two.png">
+
+      <div class="grid__badge_description">Segundo nível. Você está progredindo! Continue assim!</div>
+      <app-wide-button *ngIf="canUpgrade && userScore >= 2000 && badgeLevel === 1" [title]="'Parabéns! O nível está disponível. Clique aqui para resgatar'" [height]="150"></app-wide-button>
+    </div>
+
+    <div class="grid__image_container">
+      <h2>NÍVEL 3</h2>
+      <img [ngClass]="{'grid__unavailable_badge': !canUpgrade && badgeLevel <= 2,
+      'grid__available_badge': canUpgrade && badgeLevel <= 2, '
+      grid__won_badge': badgeLevel === 3}"
+      src="../../../../assets/images/badges/level_three.png">
+
+      <div class="grid__badge_description">Terceiro nível. Parabéns! Você tem o maior nível na higienização das mãos</div>
+      <app-wide-button *ngIf="canUpgrade && userScore >= 3000 && badgeLevel === 2" [title]="'Parabéns! O nível está disponível. Clique aqui para resgatar'" [height]="150"></app-wide-button>
+    </div>
+
+  </div>
+
+</div>
+</div>
+<div *ngIf="!canShow" style="text-align: center; font-size: 2em; align-self: center;">
+  CARREGANDO DADOS...
+</div>
