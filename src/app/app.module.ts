@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { UserModule } from './modules/user/user.module';
 import { HttpClientModule } from '@angular/common/http'
 import { AuthGuardService } from './guard/auth-guard.service';
+import { GameficationModule } from './modules/gamefication/gamefication.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthGuardService } from './guard/auth-guard.service';
     AccountModule,
     SharedModule,
     UserModule,
-    HttpClientModule
+    HttpClientModule,
+    GameficationModule
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]
