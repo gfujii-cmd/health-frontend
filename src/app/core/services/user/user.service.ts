@@ -15,6 +15,6 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUser(email: string): Observable<BaseResponse<User>> {
-    return this.http.get<BaseResponse<User>>(API_URL);
+    return this.http.get<BaseResponse<User>>(API_URL + `/${email}`);
   }
 }
