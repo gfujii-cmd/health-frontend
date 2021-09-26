@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.grid {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  margin-top: 5em;
+  box-sizing: border-box;
+  padding: 6em;
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr;
+  gap: 5em;
+  justify-content: center;
+}
+
+.base_input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+input {
+  outline:none;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+  padding-left: 20px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  color: black;
+  font-size: 1.5em;
+}
+
+.base_input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+.base_input__label {
+  font-size: 1.6em;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 1em;
+}
+
+.base_input__input {
+  border-radius: 25px;
+  border: 1px solid rgb(192, 192, 192);
+  height: 40px;
+  margin-bottom: 1em;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.confirm-btn {
+  margin-bottom: 70px;
+}
+.return-btn {
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width:830px){
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 1rem;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 1rem;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 1rem;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 1rem;
+}
