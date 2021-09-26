@@ -27,6 +27,11 @@ const routes: Routes = [
         path: 'gamefication',
         loadChildren: () => import('./modules/gamefication/gamefication.module')
         .then(m => m.GameficationModule)
+      },
+      {
+        path: 'collaborator',
+        loadChildren: () => import('./modules/collaborator/collaborator.module')
+        .then(m => m.CollaboratorModule)
       }
     ]
   }

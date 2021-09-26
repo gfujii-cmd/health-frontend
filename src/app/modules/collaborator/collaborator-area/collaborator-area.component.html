@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="container__grid">
+    <div>
+      <h1 class="container__title">Olá, {{userName}}!</h1>
+      <h2 class="container__subtitle">Como está indo sua higienização das mãos hoje?</h2>
+    </div>
+    <div class="buttons">
+      <button (click)="goToPage('/account/edit')" class="btn">Editar informações</button>
+      <button (click)="goToPage('/gamefication/badges')" class="btn">Gamification</button>
+
+    </div>
+    <div class="return-btn">
+    <app-wide-button style="display: flex; justify-content: center;"
+    routerLink="/user/panel" [title]="'Voltar'" [height]="40" [width]=150></app-wide-button>
+    </div>
+
+</div>

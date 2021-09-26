@@ -33,8 +33,13 @@
 
   </div>
 
+
 </div>
+
 </div>
+
 <div *ngIf="!canShow" style="text-align: center; font-size: 2em; align-self: center;">
   CARREGANDO DADOS...
 </div>
+<app-wide-button style="display: flex; justify-content: center; padding: 20px;"
+    routerLink="/user/panel" [title]="'Voltar'" [height]="40" [width]=150></app-wide-button>

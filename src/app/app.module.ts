@@ -17,11 +17,10 @@ import { GameficationModule } from './modules/gamefication/gamefication.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AccountModule,
     SharedModule,
     UserModule,
     HttpClientModule,
-    GameficationModule
+
   ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent]

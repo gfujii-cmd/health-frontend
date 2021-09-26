@@ -5,16 +5,36 @@
   box-sizing: border-box;
   padding: 0em 2em 0 2em;
 }
-
-.image {
+.image-desktop {
   width: 80%;
   margin: auto;
   display: grid;
   grid-column: 1fr;
 }
 
-.image__hand {
-  transform: scale(0.9);
-  width: 100%;
-  height: 100%;
+@media only screen and (min-width:900px){
+  .image__hand__pc {
+    transform: scale(0.9);
+    width: 100%;
+    height: 100%;
+  }
+  .image__hand__m{
+    display:none;
+  }
+}
+
+
+@media only screen and (max-width:900px){
+  .image__hand__pc{
+    display: none;
+  }
+  .image__hand__m{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-bottom: 10px;
+  }
+  .return-btn{
+    padding-bottom: 30px;
+  }
 }
