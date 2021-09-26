@@ -5,6 +5,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AccountRoutingModule } from './account-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { RegisterComponent } from './register/register.component';
   exports: [],
   declarations: [
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    EditUserComponent
   ],
   providers: [],
 })
